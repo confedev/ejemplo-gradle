@@ -2,14 +2,8 @@
 
 ## Windows
 
-### Compile Code
-* ./mvnw.cmd clean compile -e
-
-### Test Code
-* ./mvnw.cmd clean test -e
-
-### Jar Code
-* ./mvnw.cmd clean package -e
+### Build
+* ./gradlew.cmd build
 
 ### Run Jar
 * Local:      ./mvnw.cmd spring-boot:run 
