@@ -8,9 +8,15 @@ pipeline {
         stage("Pipeline"){
             steps {
                 script{
-                    stage("Test Jenkinfile"){
+                    stage("Stage Groovy"){
                         sh "echo 'Test Jenkinfile'"
-                        // code
+                        def ejecucion = load 'gradle.groovy'
+                        ejecucion.call()
+                    }
+                    stage("Stage Maven"){
+                        sh "echo 'Test Jenkinfile'"
+                        def ejecucion = load 'maven.groovy'
+                        ejecucion.call()
                     }
                 }
             }
