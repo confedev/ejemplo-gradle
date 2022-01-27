@@ -15,14 +15,16 @@ pipeline {
         stage("Pipeline"){
             steps {
                 script{
-                  print 'Seleccionado ' + params.compileTool;
+                  print 'Compile Tool: ' + params.compileTool;
                   switch(params.compileTool)
                     {
                         case 'Maven':
+                            print 'Ejecutando Maven';
                             def ejecucion = load 'maven.groovy'
                             ejecucion.call()
                         break;
                         case 'Gradle':
+                            print 'Ejecutando Gradle';
                             def ejecucion = load 'gradle.groovy'
                             ejecucion.call()
                         break;
