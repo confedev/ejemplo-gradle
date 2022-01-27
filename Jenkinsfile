@@ -15,6 +15,7 @@ pipeline {
         stage("Pipeline"){
             steps {
                 script{
+                  print 'Seleccionado ' + params.compileTool;
                   switch(params.compileTool)
                     {
                         case 'Maven':
