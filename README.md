@@ -63,4 +63,4 @@ docker run -it --rm -p 8081:8081  -v $(pwd):/code --workdir /code maven mvn spri
 
 #Cambio para gatillar webhook # 1
 #Comando git:
-## git add . && git commit -am "mensaje" && git push origin feature-nexus
+## git add . && git commit -am "mensaje" && git push origin feature/maven-gradle
